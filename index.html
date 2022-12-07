@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <link rel="icon" href="./img/Pokeball.png">
+    <link
+      href="//db.onlinewebfonts.com/c/831e1f4da157d96bc996f8c9f5f1e578?family=Pokemon+GB"
+      rel="stylesheet"
+    />
+    <link href="./CSS/Pokedex.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header flex-center">
+      <a href="index.html"
+        ><img
+          src="./img/Pokémon_Gotta_catch_em_all_logo.webp"
+          alt="Logo Pokemon"
+          class="logo"
+      /></a>
+      <form action="" onsubmit="buscarPokemon(event)">
+        <input
+          type="text"
+          data-poke-placeholder
+          placeholder="Pokemon a buscar"
+          autocomplete="off"
+          name="pokemon"
+          id="input1"
+          class="pokemonBuscar"
+        />
+      </form>
+    </header>
+    <main>
+      <section id="pokedexCuerpo" class="pokedexCuerpo">
+        <div class="pokedexLed__Section">
+          <div class="pokedexLed__BordeExterno">
+            <div class="pokedexLed__Led"></div>
+          </div>
+        </div>
+        <div data-poke-card class="poke-card" id="poke-card">
+            <div class="dataPokemon__general">
+                <div data-poke-name class="PokeName background-border flex-center">Pokedex</div>
+                <div data-poke-img-container>
+                    <img data-poke-img class="poke-img flex-center" src="./img/Pokeball.png" />
+                </div>
+                <div data-poke-id class="PokeId background-border" id="poke-id"></div>
+                <div data-poke-types class="poke-types background-border" id="poke-types"></div>
+                <div data-poke-Weight class="poke-weight background-border" id="poke-weight"></div>
+                <div data-poke-Height class="poke-height background-border" id="poke-height"></div>
+            </div>
+            <div class="dataPokemon__stats" id="dataPokemon__stats">
+                <div data-poke-stats class="pokeStats background-border" id="pokeStats">
+                  <h3>STATS</h3>
+                    <canvas id="myChart" class="chart"></canvas>
+                </div>
+                <div data-poke-moves class="PokeMoves background-border" id="PokeMoves"></div>
+                <div data-poke-abilities class="pokeAbilities background-border" id="pokeAbilities"></div>
+            </div>
+        </div>
+      </section>
+    </main>
+    <audio data-sound-pokemon src="" autoplay></audio>
+    <script src="./js/script.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+</html>
